@@ -6,5 +6,4 @@
 
 #### 第一章：搭建环境
 见Issue: 搭建环境
-> https://github.com/shenhuaxin/spring-cloud-learn/issues/1
-
+> https://github.com/shenhuaxin/blog/issues/5
