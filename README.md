@@ -11,7 +11,8 @@ SpringCloud学习过程
 #### 第二章：注册中心
 
 ##### Eureka
-1. Eureka2.0虽然不再维护， 但是Eureka1.X仍然活跃。可能之后不再用于正式环境，但是注册中心的思想仍然可以学习。
-
+1. Eureka2.0虽然不再维护， 但是Eureka1.X仍然活跃。
+见Issue: Eureka注册中心
+> https://github.com/shenhuaxin/blog/issues/6
 
 ##### Nacos
