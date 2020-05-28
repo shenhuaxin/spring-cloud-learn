@@ -5,4 +5,6 @@
 我会使用Branch和Issue记录学习进程， 希望能够帮助你的学习
 
 #### 第一章：搭建环境
-见Issue: **搭建环境**
+见Issue: 搭建环境
+> https://github.com/shenhuaxin/spring-cloud-learn/issues/1
+
