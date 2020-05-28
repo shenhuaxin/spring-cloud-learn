@@ -1,0 +1,16 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: discovery-learn
+
+
+eureka:
+  client:
+    register-with-eureka: false   # 不向服务中心注册自己。
+    fetch-registry: false         # 是否需要从注册中心拉取数据。
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  instance:
+    hostname: localhost
