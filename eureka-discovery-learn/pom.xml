@@ -9,7 +9,7 @@
         <version>1.0.0</version>
     </parent>
     <groupId>com.springcloud.learn</groupId>
-    <artifactId>discovery-learn</artifactId>
+    <artifactId>eureka-discovery-learn</artifactId>
     <version>1.0.0</version>
     <name>discovery-learn</name>
     <description>注册中心</description>

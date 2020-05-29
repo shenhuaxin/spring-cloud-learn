@@ -9,3 +9,6 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://shenhuaxin1:8700/eureka
+  instance:
+    instance-id: shop-service-learn
+    prefer-ip-address: true
