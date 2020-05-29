@@ -12,3 +12,7 @@ eureka:
   instance:
     instance-id: shop-service-learn
     prefer-ip-address: true
+
+user-service-learn:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
