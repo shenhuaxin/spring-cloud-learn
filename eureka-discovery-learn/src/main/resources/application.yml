@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: discovery-learn
+    name: eureka-discovery-learn
   profiles:
     active: register1   #项目启动，确定使用哪个配置
 eureka:
