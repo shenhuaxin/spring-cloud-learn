@@ -11,6 +11,9 @@ public class ShopController {
 
     private String USER_SERVICE_URL = "http://user-service-learn";
 
+    private String ORDER_SERVICE_URL = "http://order-service-learn";
+
+
     @Autowired
     private RestTemplate restTemplate;
 
@@ -21,6 +24,9 @@ public class ShopController {
         return restTemplate.getForObject(USER_SERVICE_URL + "/getUser", String.class);
     }
 
-
+    @GetMapping("getOrder")
+    public String getOrder() {
+        return restTemplate.getForObject(ORDER_SERVICE_URL + "/getOrder", String.class);
+    }
 
 }
