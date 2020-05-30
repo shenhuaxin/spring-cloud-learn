@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: order-service-learn
+
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://shenhuaxin1:8700/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: order-service-learn${random.long}
+
+server:
+  port: 0
