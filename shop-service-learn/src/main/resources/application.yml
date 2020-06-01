@@ -12,5 +12,13 @@ eureka:
   instance:
     instance-id: shop-service-learn
     prefer-ip-address: true
+#Logger:
+#  Level: FULL
+#debug: true
+logging:
+  level:
+    com.springcloud.learn.shop.service.learn.service.OrderService: debug
 
-debug: true
+feign:
+  hystrix:
+    enabled: true

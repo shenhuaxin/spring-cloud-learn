@@ -4,6 +4,7 @@ import com.netflix.loadbalancer.BestAvailableRule;
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
 import com.netflix.loadbalancer.RoundRobinRule;
+import feign.Logger;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.ribbon.ZonePreferenceServerListFilter;
 import org.springframework.context.annotation.Bean;
@@ -20,9 +21,10 @@ public class ApplicationConfig {
     }
 
 
+
     @Bean
-    public IRule getRule() {
-        return new RoundRobinRule();
+    Logger.Level feignLoggerLevel() {
+        return Logger.Level.FULL;
     }
 
 }
