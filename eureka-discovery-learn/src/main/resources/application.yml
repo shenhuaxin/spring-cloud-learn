@@ -9,7 +9,8 @@ eureka:
     register-with-eureka: false   # 不向服务中心注册自己。
     fetch-registry: false         # 是否需要从注册中心拉取数据。
     service-url:
-      defaultZone: http://shenhuaxin1:8700/eureka/,http://shenhuaxin2:8701/eureka/,http://shenhuaxin3:8702/eureka/
+      defaultZone: http://shenhuaxin1:8700/eureka/
+#,http://shenhuaxin2:8701/eureka/,http://shenhuaxin3:8702/eureka/
 
 ---
 server:

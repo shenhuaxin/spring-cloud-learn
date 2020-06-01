@@ -2,6 +2,7 @@ package com.springcloud.learn.shop.service.learn.controller;
 
 import com.springcloud.learn.shop.service.learn.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;

@@ -60,6 +60,7 @@
         <module>eureka-discovery-learn</module>
         <module>shop-service-learn</module>
         <module>user-service-learn</module>
+        <module>order-service-learn</module>
     </modules>
 
 </project>

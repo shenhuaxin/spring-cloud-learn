@@ -14,8 +14,8 @@ public class OrderController {
 
     @GetMapping("getOrder")
     public String getOrder() {
-        throw  new RuntimeException("获取数据异常");
-//        return "Order" + port;
+//        throw  new RuntimeException("获取数据异常");
+        return "Order" + port;
     }
 
 
