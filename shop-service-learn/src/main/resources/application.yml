@@ -1,24 +1,39 @@
-server:
-  port: 8082
+
 spring:
   application:
     name: shop-service-learn
+  profiles:
+    active: shop1
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka
+      defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/
   instance:
     instance-id: shop-service-learn
     prefer-ip-address: true
-#Logger:
-#  Level: FULL
-#debug: true
+
+
 logging:
   level:
-    com.springcloud.learn.shop.service.learn.service.OrderService: debug
+    root: debug
 
-#feign:
-#  hystrix:
-#    enabled: true
+
+---
+spring:
+  profiles: shop1
+server:
+  port: 8091
+
+---
+spring:
+  profiles: shop2
+server:
+  port: 8092
+
+---
+spring:
+  profiles: shop3
+server:
+  port: 8093
