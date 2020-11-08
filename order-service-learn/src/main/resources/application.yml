@@ -8,10 +8,10 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://shenhuaxin1:8700/eureka
+      defaultZone: http://127.0.0.1:8761/eureka,http://127.0.0.1:8762/eureka
   instance:
     prefer-ip-address: true
-    instance-id: order-service-learn${random.long}
+    instance-id: order-service-learn
 
 server:
-  port: 0
+  port: 8083

@@ -1,4 +1,4 @@
-package com.springcloud.learn.shop.service.rule;
+package com.springcloud.learn.shop.service.learn.config;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;

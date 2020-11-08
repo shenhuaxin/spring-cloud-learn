@@ -8,7 +8,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://shenhuaxin1:8700/eureka
+      defaultZone: http://127.0.0.1:8761/eureka
   instance:
     instance-id: shop-service-learn
     prefer-ip-address: true
@@ -19,6 +19,6 @@ logging:
   level:
     com.springcloud.learn.shop.service.learn.service.OrderService: debug
 
-feign:
-  hystrix:
-    enabled: true
+#feign:
+#  hystrix:
+#    enabled: true
