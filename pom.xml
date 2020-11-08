@@ -57,7 +57,7 @@
         </plugins>
     </build>
     <modules>
-        <module>eureka-discovery-learn</module>
+        <module>eureka-register-learn</module>
         <module>shop-service-learn</module>
         <module>user-service-learn</module>
         <module>order-service-learn</module>
