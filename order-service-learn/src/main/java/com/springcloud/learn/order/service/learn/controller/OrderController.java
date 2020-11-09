@@ -9,13 +9,18 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderController {
 
 
-    @Value("${eureka.instance.instance-id}")
+    @Value("${server.port}")
     private String port;
 
     @GetMapping("getOrder")
     public String getOrder() {
-//        throw  new RuntimeException("获取数据异常");
-        return "Order" + port;
+        if (port.equals("8083")) {
+            System.out.println("成功");
+        }else {
+            System.out.println("失败");
+            int i = 1/0;
+        }
+        return "order: " +port;
     }
 
 

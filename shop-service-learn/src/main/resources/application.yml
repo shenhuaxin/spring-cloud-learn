@@ -3,15 +3,30 @@ server:
 spring:
   application:
     name: shop-service-learn
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka
+      defaultZone: http://127.0.0.1:8763/eureka
   instance:
-    instance-id: shop-service-learn
     prefer-ip-address: true
+
+
+order-service-learn:
+  ribbon:
+    eureka:
+      enable: false
+    listOfServers: http://127.0.0.1:8083, http://127.0.0.1:8084
+    MaxAutoRetries: 1
+    retryableStatusCodes: 500
+    MaxAutoRetriesNextServer: 1
+    OkToRetryOnAllOperations: true
+
 #Logger:
 #  Level: FULL
 #debug: true
