@@ -14,7 +14,13 @@ public class OrderController {
 
     @GetMapping("getOrder")
     public String getOrder() {
-        return "Order" + port;
+        if (port.equals("8083")) {
+            System.out.println("成功");
+        }else {
+            System.out.println("失败");
+            int i = 1/0;
+        }
+        return "order: " +port;
     }
 
 

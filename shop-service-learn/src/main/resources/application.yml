@@ -1,7 +1,12 @@
-
+server:
+  port: 8082
 spring:
   application:
     name: shop-service-learn
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
   profiles:
     active: shop1
 eureka:
@@ -11,10 +16,10 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/
   instance:
-    instance-id: shop-service-learn
     prefer-ip-address: true
-
-
+#Logger:
+#  Level: FULL
+#debug: true
 logging:
   level:
     root: debug
