@@ -2,23 +2,24 @@ spring:
   application:
     name: order-service-learn
   profiles:
-    active: order2
+    active: order3
 
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka,http://127.0.0.1:8762/eureka,http://127.0.0.1:8763/eureka
+      defaultZone: http://shenhuaxin1:8761/eureka/,http://shenhuaxin2:8762/eureka/
   instance:
-    prefer-ip-address: true
+    hostname: shenhuaxin1
+    appname: order-service-learn
 
 
 ---
 spring:
   profiles: order1
 server:
-  port: 8084
+  port: 8083
 
 ---
 spring:

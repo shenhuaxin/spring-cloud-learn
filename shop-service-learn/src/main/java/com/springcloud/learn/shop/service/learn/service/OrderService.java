@@ -1,15 +1,27 @@
 package com.springcloud.learn.shop.service.learn.service;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
-import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
+@Service
+public class OrderService {
+
+    @Autowired
+    private RestTemplate restTemplate;
+
+    private String ORDER_SERVICE_URL = "http://order-service-learn";
 
 
+    @HystrixCommand(fallbackMethod = "getOrderDefault")
+    public String getOrder() {
+        return restTemplate.getForObject(ORDER_SERVICE_URL + "/getOrder", String.class);
+    }
 
-@FeignClient(value = "order-service-learn", fallback = OrderServiceFallback.class)
-public interface OrderService {
 
-    @GetMapping("/getOrder")
-    String getOrder();
+    public String getOrderDefault() {
+        return "order-default";
+    }
 
 }

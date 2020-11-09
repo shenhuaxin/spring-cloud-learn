@@ -3,10 +3,6 @@ server:
 spring:
   application:
     name: shop-service-learn
-  cloud:
-    loadbalancer:
-      retry:
-        enabled: true
   profiles:
     active: shop1
 eureka:
@@ -14,15 +10,24 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/
+      defaultZone: http://shenhuaxin1:8761/eureka/,http://shenhuaxin2:8762/eureka/
+      #http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/
   instance:
-    prefer-ip-address: true
-#Logger:
-#  Level: FULL
-#debug: true
+    hostname: shenhuaxin1
 logging:
   level:
-    root: debug
+    root: info
+
+order-service-learn:
+  ribbon:
+    eureka:
+      enable: true
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+    MaxAutoRetries: 1
+    retryableStatusCodes: 500
+    MaxAutoRetriesNextServer: 1
+    OkToRetryOnAllOperations: true
+
 
 
 ---
