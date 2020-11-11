@@ -5,6 +5,13 @@ spring:
     name: shop-service-learn
   profiles:
     active: shop1
+  cloud:
+    config:
+      profile: test
+      label: master
+      uri: http://shenhuaxin1:12581
+
+
 eureka:
   client:
     fetch-registry: true

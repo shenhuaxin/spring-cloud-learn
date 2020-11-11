@@ -2,6 +2,7 @@ package com.springcloud.learn.shop.service.learn.controller;
 
 import com.springcloud.learn.shop.service.learn.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -17,6 +18,9 @@ public class ShopController {
     @Autowired
     private OrderService orderService;
 
+    @Value("${a}")
+    private String value;
+
     @Autowired
     private RestTemplate restTemplate;
 
@@ -29,7 +33,7 @@ public class ShopController {
     public String getOrder() {
         System.out.println(restTemplate.getForObject(ORDER_SERVICE_URL + "/getOrder", String.class));
 
-        return null;
+        return value;
 //        return orderService.getOrder();
     }
 

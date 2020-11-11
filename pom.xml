@@ -59,6 +59,8 @@
         <module>shop-service-learn</module>
         <module>user-service-learn</module>
         <module>order-service-learn</module>
+        <module>zuul-gateway-learn</module>
+        <module>config-server-learn</module>
     </modules>
 
 </project>
