@@ -9,7 +9,7 @@ spring:
           uri: https://github.com/shenhuaxin/spring-cloud-learn.git
           username: shenhuaxin
           password: shenhuaxing9854
-          search-paths: config-center/`{application}`
+          search-paths: 'config-center/{application}'
           clone-on-start: true
 server:
   port: 12581

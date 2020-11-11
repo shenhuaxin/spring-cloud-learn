@@ -12,6 +12,7 @@ spring:
       uri: http://shenhuaxin1:12581
 
 
+
 eureka:
   client:
     fetch-registry: true
