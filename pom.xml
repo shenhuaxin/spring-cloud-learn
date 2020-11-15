@@ -61,6 +61,7 @@
         <module>order-service-learn</module>
         <module>zuul-gateway-learn</module>
         <module>config-server-learn</module>
+        <module>goods-service-learn</module>
     </modules>
 
 </project>

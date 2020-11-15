@@ -9,10 +9,10 @@
         <version>1.0.0</version>
     </parent>
     <groupId>com.springcloud.learn</groupId>
-    <artifactId>user-service-learn</artifactId>
+    <artifactId>goods-service-learn</artifactId>
     <version>1.0.0</version>
-    <name>user-service-learn</name>
-    <description>用户服务</description>
+    <name>goods-service-learn</name>
+    <description>商品服务</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -48,15 +48,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
@@ -77,6 +68,17 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.4.1.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -90,11 +92,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            -->
-<!--        </plugins>-->
-<!--    </build>-->
 
 </project>
