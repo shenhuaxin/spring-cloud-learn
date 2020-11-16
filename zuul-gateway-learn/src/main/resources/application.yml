@@ -1,0 +1,31 @@
+
+spring:
+  application:
+    name: zuul-gateway-learn
+server:
+  port: 12580
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://shenhuaxin1:8761/eureka, http://shenhuaxin2:8762/eureka,
+  instance:
+    hostname: shenhuaxin1
+
+
+
+
+zuul:
+  routes:
+    user-service:
+      path: /user-service/**
+      serviceId: user-service-learn
+    order-service:
+      path: /order-service/**
+      serviceId: order-service-learn
+    goods-service:
+      path: /goods-service/**
+      serviceId: goods-service-learn
+    shop-service:
+      path: /shop-service/**
+      serviceId: shop-service-learn
+  sensitive-headers:

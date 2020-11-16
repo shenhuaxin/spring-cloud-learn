@@ -1,0 +1,15 @@
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/shenhuaxin/spring-cloud-learn.git
+          username: shenhuaxin
+          password: shenhuaxing9854
+          search-paths: 'config-center/{application}'
+          clone-on-start: true
+server:
+  port: 12581

@@ -1,6 +1,7 @@
 package com.springcloud.learn.controller;
 
 import com.springcloud.learn.api.Goods;
+import io.seata.core.context.RootContext;
 import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,8 @@ public class ShopController {
 
     @GlobalTransactional
     public String buyphone() {
+        log.info("开始全局事务，XID = " + RootContext.getXID());
+
         Goods goods = restTemplate.getForObject(GOODS_SERVICE_URL+"/getGoodsDetail", Goods.class);
         Long goodsId = goods.getId();
         BigDecimal goodsPrice = goods.getPrice();
