@@ -29,7 +29,7 @@ public class OrderController {
         order.setGoodId(goodsId);
         order.setVersion(1L);
         orderRepository.save(order);
-        return "创建订单成功过";
+        return "创建订单成功";
     }
 
     @RequestMapping(value = "/")

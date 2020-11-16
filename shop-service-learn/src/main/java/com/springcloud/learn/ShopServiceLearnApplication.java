@@ -8,7 +8,6 @@ import org.springframework.cloud.netflix.ribbon.RibbonClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-
 @RibbonClients(defaultConfiguration = OrderRuleConfig.class)
 public class ShopServiceLearnApplication {
 
