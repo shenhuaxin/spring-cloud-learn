@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class GoodsController {
 
-    @Value("${eureka.instance.instance-id}")
-    private String port;
+//    @Value("${eureka.instance.instance-id}")
+//    private String port;
 
     @Autowired
     private GoodsRepository goodsRepository;

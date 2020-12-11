@@ -17,11 +17,11 @@ public class ShopController {
 
 //    private String ZUUL_GATEWAY_LEARN = "http://zuul-gateway-learn/";
 
-    private String USER_SERVICE_URL = "http://user-service-learn";
+    private String USER_SERVICE_URL = "http://127.0.0.1:8093";
 
-    private String ORDER_SERVICE_URL = "http://order-service-learn";
+    private String ORDER_SERVICE_URL = "http://127.0.0.1:8085";
 
-    private String GOODS_SERVICE_URL = "http://goods-service-learn";
+    private String GOODS_SERVICE_URL = "http://127.0.0.1:8084";
 
 
     @Autowired

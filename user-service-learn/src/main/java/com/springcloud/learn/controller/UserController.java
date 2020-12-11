@@ -18,8 +18,8 @@ import java.math.RoundingMode;
 @Slf4j
 public class UserController {
 
-    @Value("${eureka.instance.instance-id}")
-    private String port;
+//    @Value("${eureka.instance.instance-id}")
+//    private String port;
 
     @Autowired
     UserRepository userRepository;
